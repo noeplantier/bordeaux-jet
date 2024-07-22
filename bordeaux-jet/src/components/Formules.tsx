@@ -1,0 +1,21 @@
+import React from 'react';
+import { Box, Typography, List, ListItem, ListItemText } from '@mui/material';
+import './formules.scss';
+
+function Formules() {
+
+  return (
+    <Box className="formulas">
+      <Typography variant="h4" className="formulas-title">Nos Formules</Typography>
+      <List>
+        {['Initiation', 'Découverte', 'Sensation', 'Evasion', 'Enterrement de vie de célibataire'].map((formula, index) => (
+          <ListItem key={index}>
+            <ListItemText primary={formula} />
+          </ListItem>
+        ))}
+      </List>
+    </Box>
+  );
+};
+
+export default Formules;
