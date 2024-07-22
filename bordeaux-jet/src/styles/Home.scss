@@ -1,0 +1,26 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 80vh;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+  
+    .home-title {
+      margin-bottom: 20px;
+      font-size: 2.5rem;
+    }
+  
+    .home-subtitle {
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+    }
+  
+    .home-button {
+      font-size: 1.2rem;
+    }
+  }
+  

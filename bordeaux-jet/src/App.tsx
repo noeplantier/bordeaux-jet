@@ -1,26 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header';
+import NavigationMenu from './components/NavigationMenu';
+import Home from './components/Home';
+import Formules from './components/Formules';
+import Access from './components/Access';
+import Contact from './components/ Contact';
+import Gallery from './components/ Gallery';
+import FAQ from './components/FAQ';
+import Footer from './components/Footer';
+import Modals from './components/Modals';
+import './styles/App.scss';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <NavigationMenu />
+      <main>
+        <Home />
+        <Formules />
+        <Access />
+        <Contact />
+        <Gallery />
+        <FAQ />
+      </main>
+      <Footer />
+      <Modals />
     </div>
   );
-}
+};
 
 export default App;

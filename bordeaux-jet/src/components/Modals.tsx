@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Modal, Box, TextField, Button } from '@mui/material';
-import './modals.scss';
+import '../styles/Modals.scss';
 
 function Modals() {
   

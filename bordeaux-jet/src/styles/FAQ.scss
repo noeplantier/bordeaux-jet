@@ -1,0 +1,19 @@
+.faq {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+  
+    .faq-title {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  
+    .MuiAccordionSummary-root {
+      background-color: #f7f7f7;
+      border-bottom: 1px solid #ddd;
+    }
+  
+    .MuiAccordionDetails-root {
+      background-color: #fff;
+    }
+  }
+  

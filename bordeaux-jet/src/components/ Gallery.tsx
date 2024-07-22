@@ -1,9 +1,8 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
-import './gallery.scss';
+import '../styles/Gallery.scss';
 
-function Gallery() {
- 
+const Gallery: React.FC = () => {
   const images = [
     'image1.jpg',
     'image2.jpg',
@@ -17,9 +16,7 @@ function Gallery() {
     <Box className="gallery">
       <Typography variant="h4" className="gallery-title">Galerie</Typography>
       <Box className="gallery-carousel">
-        {images.map((image, index) => (
-          <img src={require(`../assets/images/${image}`).default} alt={`Gallery ${index + 1}`} key={index} className="gallery-image" />
-        ))}
+       
       </Box>
     </Box>
   );

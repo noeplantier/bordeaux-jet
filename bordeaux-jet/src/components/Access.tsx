@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
-import './access.scss';
+import '../styles/Access.scss';
 
 function Access() {
 

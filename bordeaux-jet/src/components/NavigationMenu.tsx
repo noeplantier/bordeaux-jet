@@ -1,6 +1,6 @@
 import React from 'react';
 import { Menu, MenuItem, Button, ListItemText } from '@mui/material';
-import './navigation.scss';
+import '../styles/NavigationMenu.scss';
 
 function NavigationMenu() {
 

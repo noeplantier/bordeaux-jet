@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Typography, TextField, Button } from '@mui/material';
-import './contact.scss';
+import '../styles/Contact.scss';
 
 function Contact() {
 

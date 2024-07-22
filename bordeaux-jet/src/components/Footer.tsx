@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Typography, Link } from '@mui/material';
-import './footer.scss';
+import '../styles/Footer.scss';
 
 function Footer() {
 

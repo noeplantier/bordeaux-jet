@@ -1,6 +1,6 @@
 import React from 'react';
 import { AppBar, Toolbar, Button } from '@mui/material';
-import './header.scss';
+import '../styles/Header.scss';
 
 function Header() {
 
