@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Typography, Button } from '@mui/material';
 import '../styles/Home.scss';
+import '../assets/background.jpg';
 
 function Home() {
 
