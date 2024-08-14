@@ -20,20 +20,20 @@
   }
 
   .MuiMenuItem-root {
-    margin: 0 15px;
-    transition: transform 0.3s ease-in-out; /* Ajout de l'effet de zoom */
-    color: white; // Couleur du texte
-    padding: 10px 15px; // Espacement interne de chaque item
+    margin: 10px;
+    transition: transform 0.3s ease-in-out; 
+    color: white; 
+    padding: 5px ; 
     cursor: pointer;
     
     &:hover {
-      transform: scale(1.1); /* Zoom au survol */
-      background-color: transparent; /* Suppression du background au survol */
-      background-color: #555; 
+      transform: scale(1.1); 
+      background-color: transparent;
     }
 
     .MuiListItemText-root {
       text-align: center;
+      font-size:2rem;
       color: white;
     }
   }
