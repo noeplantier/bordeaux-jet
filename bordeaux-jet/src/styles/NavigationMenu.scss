@@ -1,7 +1,10 @@
 .navigation-menu {
   background-color: #333;
-  padding: 10px;
+  padding: 5px;
   text-align: center;
+  display: flex;  
+  justify-content: space-around; // Distribue uniformément les items
+  background-color: #333; // Exemple de couleur de fond de la navbar
 
   .MuiButton-root {
     color: white;
@@ -10,19 +13,23 @@
 
   .menu-horizontal {
     display: flex;
-    justify-content: center; /* Aligner les items horizontalement */
+    justify-content: center; 
     background-color: #555;
-    width: 100%;
-    padding: 10px 0;
+    width: 70%;
+    padding: 5px 0;
   }
 
   .MuiMenuItem-root {
     margin: 0 15px;
     transition: transform 0.3s ease-in-out; /* Ajout de l'effet de zoom */
+    color: white; // Couleur du texte
+    padding: 10px 15px; // Espacement interne de chaque item
+    cursor: pointer;
     
     &:hover {
       transform: scale(1.1); /* Zoom au survol */
       background-color: transparent; /* Suppression du background au survol */
+      background-color: #555; 
     }
 
     .MuiListItemText-root {
@@ -31,10 +38,12 @@
     }
   }
 
-  /* Extension du fond de la barre de menu */
   .MuiMenu-paper {
     background-color: #555;
-    width: calc(100% - 20px); /* S'étend presque sur toute la largeur */
+    width: calc(100%); 
     margin: 0 auto;
   }
 }
+
+
+
