@@ -1,34 +1,17 @@
 import React from 'react';
-import Header from './components/Header';
-import NavigationMenu from './components/NavigationMenu';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
-import Formules from './components/Formules';
-import Access from './components/Access';
-import Contact from './components/ Contact';
-import Gallery from './components/ Gallery';
-import FAQ from './components/FAQ';
-import Footer from './components/Footer';
-import Modals from './components/Modals';
-import './styles/App.scss';
+import Reservation from './components/Reservation';
 
 function App() {
-
   return (
-    <div>
-      <Header />
-      <NavigationMenu />
-      <main>
-        <Home />
-        <Formules />
-        <Access />
-        <Contact />
-        <Gallery />
-        <FAQ />
-      </main>
-      <Footer />
-      <Modals />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/reservation" element={<Reservation />} />
+      </Routes>
+    </Router>
   );
-};
+}
 
 export default App;

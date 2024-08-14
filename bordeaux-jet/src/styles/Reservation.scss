@@ -1,0 +1,21 @@
+.reservation {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  
+    .reservation-title {
+      margin-bottom: 20px;
+      color: #333;
+    }
+  
+    .reservation-button {
+      margin-top: 20px;
+      width: 100%;
+    }
+  
+    .MuiFormControl-root {
+      margin-bottom: 20px;
+    }
+  }
+  

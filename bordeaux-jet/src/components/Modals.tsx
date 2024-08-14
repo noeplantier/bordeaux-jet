@@ -1,22 +1,23 @@
 import React, { useState } from 'react';
-import { Modal, Box, TextField, Button } from '@mui/material';
+import { Modal, Box, TextField, Button, IconButton } from '@mui/material';
+import CloseIcon from '@mui/icons-material/Close'; // Importation de l'icône pour la fermeture
 import '../styles/Modals.scss';
 
-function Modals() {
-  
-  const [openLogin, setOpenLogin] = useState(false);
-  const [openRegister, setOpenRegister] = useState(false);
+interface ModalsProps {
+  openLogin: boolean;
+  openRegister: boolean;
+  handleCloseLogin: () => void;
+  handleCloseRegister: () => void;
+}
 
-  const handleOpenLogin = () => setOpenLogin(true);
-  const handleCloseLogin = () => setOpenLogin(false);
-  const handleOpenRegister = () => setOpenRegister(true);
-  const handleCloseRegister = () => setOpenRegister(false);
-
+const Modals: React.FC<ModalsProps> = ({ openLogin, openRegister, handleCloseLogin, handleCloseRegister }) => {
   return (
     <div>
-      <Button onClick={handleOpenLogin}>Connexion</Button>
       <Modal open={openLogin} onClose={handleCloseLogin}>
         <Box className="modal-box">
+          <IconButton className="close-button" onClick={handleCloseLogin}>
+            <CloseIcon />
+          </IconButton>
           <h2>Connexion</h2>
           <TextField label="Email" variant="outlined" fullWidth margin="normal" />
           <TextField label="Mot de passe" type="password" variant="outlined" fullWidth margin="normal" />
@@ -24,9 +25,11 @@ function Modals() {
         </Box>
       </Modal>
       
-      <Button onClick={handleOpenRegister}>Inscription</Button>
       <Modal open={openRegister} onClose={handleCloseRegister}>
         <Box className="modal-box">
+          <IconButton className="close-button" onClick={handleCloseRegister}>
+            <CloseIcon />
+          </IconButton>
           <h2>Inscription</h2>
           <TextField label="Nom" variant="outlined" fullWidth margin="normal" />
           <TextField label="Email" variant="outlined" fullWidth margin="normal" />

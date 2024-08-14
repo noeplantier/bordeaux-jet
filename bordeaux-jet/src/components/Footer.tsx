@@ -8,8 +8,8 @@ function Footer() {
     <Box className="footer">
       <Typography variant="body1">
         Suivez-nous :
-        <Link href="https://www.facebook.com" target="_blank" rel="noopener" className="footer-link">Facebook</Link>,
-        <Link href="https://www.instagram.com" target="_blank" rel="noopener" className="footer-link">Instagram</Link>,
+        <Link href="https://www.facebook.com" target="_blank" rel="noopener" className="footer-link">Facebook</Link>
+        <Link href="https://www.instagram.com" target="_blank" rel="noopener" className="footer-link">Instagram</Link>
         <Link href="https://www.twitter.com" target="_blank" rel="noopener" className="footer-link">Twitter</Link>
       </Typography>
       <Typography variant="body2" className="footer-copy">
