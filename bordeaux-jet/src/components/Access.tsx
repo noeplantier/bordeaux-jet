@@ -1,11 +1,34 @@
 import React from 'react';
+import { useState } from 'react';
 import { Box, Typography } from '@mui/material';
 import '../styles/Access.scss';
+import Header from './Header';
+import NavigationMenu from './NavigationMenu';
+import Modals from './Modals';
+
 
 function Access() {
 
+  const [openLogin, setOpenLogin] = useState(false);
+  const [openRegister, setOpenRegister] = useState(false);
+  const [timeSlot, setTimeSlot] = useState('');
+  const [priceRange, setPriceRange] = useState('');
+  const [date, setDate] = useState('');
+
+  const handleOpenLogin = () => setOpenLogin(true);
+  const handleCloseLogin = () => setOpenLogin(false);
+  const handleOpenRegister = () => setOpenRegister(true);
+  const handleCloseRegister = () => setOpenRegister(false);
+    
   return (
     <Box className="access">
+    <Header onLoginClick={handleOpenLogin} onRegisterClick={handleOpenRegister} />
+      <Modals
+        openLogin={openLogin}
+        openRegister={openRegister}
+        handleCloseLogin={handleCloseLogin}
+        handleCloseRegister={handleCloseRegister}/>   
+        <NavigationMenu/>
       <Typography variant="h4" className="access-title">Nous Trouver</Typography>
       <iframe
         className="access-map"
