@@ -1,10 +1,40 @@
+.header-appbar {
+  background-color: white;
+  color: black;
+}
+
 .header-toolbar {
-    background-color: rgb(9, 27, 126);
-    color: #fff;
-    padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-title {
+  font-family: 'Arial', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.header-search {
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.05); 
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.search-icon {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.search-input {
+  margin-left: 8px;
+  color: black;
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.5); 
   }
-  
-  .header-title {
-    font-weight: bold;
-  }
-  
+}
+
+.header-buttons Button {
+  margin-left: 8px;
+}

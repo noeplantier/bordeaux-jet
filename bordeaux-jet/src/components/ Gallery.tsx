@@ -29,7 +29,9 @@ function Gallery () {
 
   return (
     <><Box className="gallery">
-      <Header onLoginClick={handleOpenLogin} onRegisterClick={handleOpenRegister} />
+      <Header onLoginClick={handleOpenLogin} onRegisterClick={handleOpenRegister} onSearch={function (query: string): void {
+        throw new Error('Function not implemented.');
+      } } />
       <Modals
         openLogin={openLogin}
         openRegister={openRegister}

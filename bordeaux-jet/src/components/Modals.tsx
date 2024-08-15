@@ -31,9 +31,13 @@ const Modals: React.FC<ModalsProps> = ({ openLogin, openRegister, handleCloseLog
             <CloseIcon />
           </IconButton>
           <h2>Inscription</h2>
+          <TextField label="Prénom" variant="outlined" fullWidth margin="normal" />
           <TextField label="Nom" variant="outlined" fullWidth margin="normal" />
+          <TextField label="Date de naissance" variant="outlined" fullWidth margin="normal" />
+          <TextField label="Adresse" variant="outlined" fullWidth margin="normal" />
           <TextField label="Email" variant="outlined" fullWidth margin="normal" />
           <TextField label="Mot de passe" type="password" variant="outlined" fullWidth margin="normal" />
+          <TextField label="Confirmation du mot de passe" type="password" variant="outlined" fullWidth margin="normal" />
           <Button variant="contained" color="primary">S'inscrire</Button>
         </Box>
       </Modal>

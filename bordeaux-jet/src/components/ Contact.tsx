@@ -22,7 +22,9 @@ function Contact() {
 
   return (
     <><Box className="contact">
-      <Header onLoginClick={handleOpenLogin} onRegisterClick={handleOpenRegister} />
+      <Header onLoginClick={handleOpenLogin} onRegisterClick={handleOpenRegister} onSearch={function (query: string): void {
+        throw new Error('Function not implemented.');
+      } } />
       <Modals
         openLogin={openLogin}
         openRegister={openRegister}
@@ -30,7 +32,24 @@ function Contact() {
         handleCloseRegister={handleCloseRegister} />
       <NavigationMenu />
       <Typography variant="h4" className="contact-title">Contactez-nous</Typography>
+      <Box className="contacts">
+      <Typography variant="body1">
+        Vous avez des questions ou vous souhaitez réserver une activité ? N'hésitez pas à nous contacter :
+      </Typography>
+      <Typography variant="body1">
+        <strong>Adresse :</strong> Quai Richelieu, 33000 Bordeaux, France
+      </Typography>
+      <Typography variant="body1">
+        <strong>Téléphone :</strong> +33 5 56 00 00 00
+      </Typography>
+      <Typography variant="body1">
+        <strong>Email :</strong> contact@bordeauxjet.com
+      </Typography>
+      {/* Ajouter une carte interactive ici */}
+      {/* Ajouter un formulaire de contact */}
+    </Box>
       <form className="contact-form">
+      <TextField label="Prénom" variant="outlined" fullWidth margin="normal" />
         <TextField label="Nom" variant="outlined" fullWidth margin="normal" />
         <TextField label="Email" variant="outlined" fullWidth margin="normal" />
         <TextField label="Message" variant="outlined" fullWidth margin="normal" multiline rows={4} />
