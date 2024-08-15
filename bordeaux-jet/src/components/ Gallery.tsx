@@ -5,6 +5,7 @@ import '../styles/Gallery.scss';
 import Header from './Header';
 import NavigationMenu from './NavigationMenu';
 import Modals from './Modals';
+import Footer from './Footer';
 
 function Gallery () {
   const images = [
@@ -27,19 +28,19 @@ function Gallery () {
   const handleCloseRegister = () => setOpenRegister(false);
 
   return (
-    <Box className="gallery">
-    <Header onLoginClick={handleOpenLogin} onRegisterClick={handleOpenRegister} />
+    <><Box className="gallery">
+      <Header onLoginClick={handleOpenLogin} onRegisterClick={handleOpenRegister} />
       <Modals
         openLogin={openLogin}
         openRegister={openRegister}
         handleCloseLogin={handleCloseLogin}
-        handleCloseRegister={handleCloseRegister}/>   
-        <NavigationMenu/>
+        handleCloseRegister={handleCloseRegister} />
+      <NavigationMenu />
       <Typography variant="h4" className="gallery-title">Galerie</Typography>
       <Box className="gallery-carousel">
-       
+
       </Box>
-    </Box>
+    </Box><Footer /></>
   );
 };
 

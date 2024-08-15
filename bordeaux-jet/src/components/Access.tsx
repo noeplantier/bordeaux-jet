@@ -5,6 +5,7 @@ import '../styles/Access.scss';
 import Header from './Header';
 import NavigationMenu from './NavigationMenu';
 import Modals from './Modals';
+import Footer from './Footer';
 
 
 function Access() {
@@ -21,14 +22,14 @@ function Access() {
   const handleCloseRegister = () => setOpenRegister(false);
     
   return (
-    <Box className="access">
-    <Header onLoginClick={handleOpenLogin} onRegisterClick={handleOpenRegister} />
+    <><Box className="access">
+      <Header onLoginClick={handleOpenLogin} onRegisterClick={handleOpenRegister} />
       <Modals
         openLogin={openLogin}
         openRegister={openRegister}
         handleCloseLogin={handleCloseLogin}
-        handleCloseRegister={handleCloseRegister}/>   
-        <NavigationMenu/>
+        handleCloseRegister={handleCloseRegister} />
+      <NavigationMenu />
       <Typography variant="h4" className="access-title">Nous Trouver</Typography>
       <iframe
         className="access-map"
@@ -37,7 +38,7 @@ function Access() {
         height="450"
         loading="lazy"
       ></iframe>
-    </Box>
+    </Box><Footer /></>
   );
 };
 

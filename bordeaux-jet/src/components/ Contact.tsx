@@ -5,6 +5,7 @@ import '../styles/Contact.scss';
 import Header from './Header';
 import NavigationMenu from './NavigationMenu';
 import Modals from './Modals';
+import Footer from './Footer';
 
 function Contact() {
 
@@ -20,14 +21,14 @@ function Contact() {
   const handleCloseRegister = () => setOpenRegister(false);
 
   return (
-    <Box className="contact">
-         <Header onLoginClick={handleOpenLogin} onRegisterClick={handleOpenRegister} />
+    <><Box className="contact">
+      <Header onLoginClick={handleOpenLogin} onRegisterClick={handleOpenRegister} />
       <Modals
         openLogin={openLogin}
         openRegister={openRegister}
         handleCloseLogin={handleCloseLogin}
-        handleCloseRegister={handleCloseRegister}/>   
-        <NavigationMenu/>
+        handleCloseRegister={handleCloseRegister} />
+      <NavigationMenu />
       <Typography variant="h4" className="contact-title">Contactez-nous</Typography>
       <form className="contact-form">
         <TextField label="Nom" variant="outlined" fullWidth margin="normal" />
@@ -35,7 +36,7 @@ function Contact() {
         <TextField label="Message" variant="outlined" fullWidth margin="normal" multiline rows={4} />
         <Button variant="contained" color="primary" type="submit">Envoyer</Button>
       </form>
-    </Box>
+    </Box><Footer /></>
   );
 };
 

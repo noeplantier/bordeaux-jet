@@ -6,6 +6,7 @@ import '../styles/FAQ.scss';
 import Header from './Header';
 import NavigationMenu from './NavigationMenu';
 import Modals from './Modals';
+import Footer from './Footer';
 
 function FAQ() {
 
@@ -30,15 +31,15 @@ function FAQ() {
   ];
 
   return (
-    <Box className="faq">
-         
-         <Header onLoginClick={handleOpenLogin} onRegisterClick={handleOpenRegister} />
-        <Modals
-          openLogin={openLogin}
-          openRegister={openRegister}
-          handleCloseLogin={handleCloseLogin}
-          handleCloseRegister={handleCloseRegister}/>   
-          <NavigationMenu/>
+    <><Box className="faq">
+
+      <Header onLoginClick={handleOpenLogin} onRegisterClick={handleOpenRegister} />
+      <Modals
+        openLogin={openLogin}
+        openRegister={openRegister}
+        handleCloseLogin={handleCloseLogin}
+        handleCloseRegister={handleCloseRegister} />
+      <NavigationMenu />
       <Typography variant="h4" className="faq-title">FAQ</Typography>
       {faqs.map((faq, index) => (
         <Accordion key={index}>
@@ -50,7 +51,7 @@ function FAQ() {
           </AccordionDetails>
         </Accordion>
       ))}
-    </Box>
+    </Box><Footer /></>
   );
 };
 

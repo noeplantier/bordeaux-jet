@@ -5,6 +5,7 @@ import '../styles/Formules.scss';
 import Header from './Header';
 import Modals from './Modals';
 import NavigationMenu from './NavigationMenu';
+import Footer from './Footer';
 
 function Formules() {
   const [openLogin, setOpenLogin] = useState(false);
@@ -19,15 +20,15 @@ function Formules() {
   const handleCloseRegister = () => setOpenRegister(false);
   return (
     
-    <Box className="formules">
-    <Header onLoginClick={handleOpenLogin} onRegisterClick={handleOpenRegister} />
+    <><Box className="formules">
+      <Header onLoginClick={handleOpenLogin} onRegisterClick={handleOpenRegister} />
       <Modals
         openLogin={openLogin}
         openRegister={openRegister}
         handleCloseLogin={handleCloseLogin}
-        handleCloseRegister={handleCloseRegister}/>   
-        <NavigationMenu/>
-           <Typography variant="h4" className="formules-title">Nos Formules</Typography>
+        handleCloseRegister={handleCloseRegister} />
+      <NavigationMenu />
+      <Typography variant="h4" className="formules-title">Nos Formules</Typography>
       <List>
         {['Initiation', 'Découverte', 'Sensation', 'Evasion', 'Enterrement de vie de célibataire'].map((formula, index) => (
           <ListItem key={index}>
@@ -35,7 +36,7 @@ function Formules() {
           </ListItem>
         ))}
       </List>
-    </Box>
+    </Box><Footer /></>
   );
 };
 
