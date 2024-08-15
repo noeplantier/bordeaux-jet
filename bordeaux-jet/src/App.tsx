@@ -4,6 +4,7 @@ import Home from './components/Home';
 import Formules from './components/Formules';
 import Contact from './components/ Contact';
 import Galerie from './components/ Gallery';
+import Access from './components/Access';
 import FAQ from './components/FAQ';
 import Reservation from './components/Reservation';
 import NavigationMenu from './components/NavigationMenu';
@@ -15,7 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/formules" element={<Formules />} />
-   
+        <Route path="/access" element={<Access />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/galerie" element={<Galerie />} />
         <Route path="/faq" element={<FAQ />} />
